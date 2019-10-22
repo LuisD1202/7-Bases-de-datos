@@ -1,0 +1,4 @@
+credenciales usuarios:
+usuario1@gmail.com   pass: usuario1
+usuario2@gmail.com   pass: usuario2
+usuario3@gmail.com   pass: usuario3
