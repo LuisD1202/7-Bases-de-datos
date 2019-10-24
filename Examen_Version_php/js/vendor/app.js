@@ -4,7 +4,7 @@ class EventsManager {
     }
 
     obtenerDataInicial(){
-        let url = 'server/getEvents.php';
+        let url = '../server/getEvents.php';
         $.ajax({
         	url: url,
           	dataType: "json",
@@ -78,7 +78,7 @@ class EventsManager {
         	form_data.append('start_hour', "");
     	}
     	$.ajax({
-        	url: 'server/new_event.php',
+        	url: '../server/new_event.php',
         	dataType: "json",
         	cache: false,
         	processData: false,
@@ -114,7 +114,7 @@ class EventsManager {
 		var form_data = new FormData();
     	form_data.append('id', event.id);
     	$.ajax({
-        	url: 'server/delete_event.php',
+        	url: '../server/delete_event.php',
         	dataType: "json",
         	cache: false,
         	processData: false,
@@ -155,7 +155,7 @@ class EventsManager {
     	form_data.append('end_hour', end_hour);
 
     	$.ajax({
-        	url: 'server/update_event.php',
+        	url: '../server/update_event.php',
         	dataType: "json",
         	cache: false,
         	processData: false,
