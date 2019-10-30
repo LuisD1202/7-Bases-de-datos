@@ -5,13 +5,13 @@ $(function(){
 
 class Login {
   constructor() {
-    this.submitEvent()
+    this.submitEvent();
   }
 
   submitEvent(){
     $('form').submit((event)=>{
-      event.preventDefault()
-      this.sendForm()
+      event.preventDefault();
+      this.sendForm();
     })
   }
 
@@ -20,7 +20,7 @@ class Login {
     form_data.append('username', $('#user').val())
     form_data.append('password', $('#password').val())
     $.ajax({
-      url: '../server/check_login.php',
+      url: 'server/check_login.php',
       dataType: "json",
       cache: false,
       processData: false,
@@ -28,7 +28,7 @@ class Login {
       data: form_data,
       type: 'POST',
       success: function(php_response){
-        if (php_response.msg == "OK") {
+        if (php_response.msg == "Conexion OK") {
           window.location.href = 'main.html';
         }else {
           alert(php_response.msg);

@@ -28,7 +28,7 @@
         return "Error:" . $this->conexion->connect_error;
       }else {
         // La conexion es exitosa
-        return "Conexion OK"
+        return "Conexion OK";
       }
     }
 
